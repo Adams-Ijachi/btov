@@ -1,0 +1,140 @@
+.form-wrapper {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  /* background: red; */
+  gap: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--blue, #0065fc);
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+}
+
+h5 {
+  font-size: 18px;
+  font-family: Urbanist;
+  font-weight: 700;
+}
+h6 {
+  font-size: 24px;
+  font-family: Urbanist;
+  font-weight: 400;
+}
+h5,
+h6 {
+  text-align: center;
+}
+.form-controle {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+.form-controller {
+  width: 100%;
+  /* background: red; */
+}
+.input-boxe {
+  width: 50%;
+  position: relative;
+}
+.input-email {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+label {
+  text-transform: capitalize;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 50px;
+  border: 1px solid #ccc;
+}
+.btn-submit {
+  width: 70%;
+  padding: 10px;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: 1rem;
+  background: #0065fc;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-transform: capitalize;
+  border: none;
+}
+.online-sign {
+  bottom: 90px;
+}
+.trusted-signup {
+  top: 160px;
+}
+.twitter-sign {
+  top: 75px;
+}
+form p {
+  text-align: center;
+  font-family: Urbanist;
+  font-weight: 700;
+}
+form a {
+  color: #0065fc;
+}
+.rating-sign {
+  bottom: 220px;
+}
+.input-email {
+  position: relative;
+}
+.eye-sign {
+  position: absolute;
+  right: 20px;
+  top: 40px;
+}
+.monitor {
+  width: 190px;
+  bottom: 150px;
+}
+@media screen and (max-width: 768px) {
+  .form-wrapper {
+    width: 90%;
+  }
+  .background {
+    display: none;
+  }
+  .trusted {
+    display: none;
+  }
+  .monitor {
+    display: none;
+  }
+  .rating {
+    display: none;
+  }
+  .twitter {
+    display: none;
+  }
+}
+@media screen and (max-width: 992px) {
+  .form-controle {
+    flex-direction: column;
+  }
+  .input-boxe {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .rating-sign {
+    bottom: 210px;
+  }
+  .online-sign {
+    bottom: 130px;
+  }
+}

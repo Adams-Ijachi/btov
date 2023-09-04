@@ -1,0 +1,74 @@
+.back {
+  display: flex;
+  color: #000;
+  font-family: Urbanist;
+  font-weight: 400;
+  width: 90%;
+  margin: 0 auto;
+  /* justify-content: center; */
+  /* background: red; */
+  margin-top: 20px;
+}
+.back-btn {
+  display: flex;
+  color: #000;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+}
+.container-items {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: Urbanist;
+  font-style: italic;
+}
+.info {
+  display: flex;
+  gap: 10px;
+}
+.time {
+  display: flex;
+  gap: 20px;
+}
+.active-hours {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.doc-name {
+  font-size: 36px;
+  font-family: Urbanist;
+  font-style: normal;
+}
+p {
+  font-weight: 400;
+}
+span {
+  font-family: Urbanist;
+  font-weight: 700;
+}
+.appointment {
+  width: 200px;
+  font-family: Urbanist;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 10px;
+  border-radius: 50px;
+  border: none;
+  background: #0065fc;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}

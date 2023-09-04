@@ -1,0 +1,280 @@
+.form-design {
+  border-radius: 50px;
+  border: 0.5px solid #000;
+  background: #fff;
+  /* width: 400px; */
+  /* background: red; */
+}
+.form-content {
+  max-width: 100%;
+  /* background: green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  /* min-width: 300px; */
+}
+.pet-box {
+  height: 150px;
+  width: 300px;
+  /* background: red; */
+  border-radius: 8px;
+  border: 1px dashed #bbb;
+}
+input[type='file'] {
+  display: none;
+  background: #ccc;
+  color: #000;
+}
+
+#file {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 60px;
+  background: #eee;
+  color: #000;
+  /* opacity: 0.5; */
+  border-radius: 8px;
+}
+.label-step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: green; */
+}
+.steps {
+  margin: 0 auto;
+  gap: 30px;
+  display: flex;
+}
+
+.pets {
+  text-align: center;
+  font-size: 28px;
+  font-family: Urbanist;
+  margin-top: 30px;
+}
+#regForm {
+  /* background-color: #red; */
+  margin: 100px auto;
+  padding: 40px;
+  /* max-width: 600px; */
+  width: 50%;
+  /* min-width: 400px; */
+}
+
+/* Style the input fields */
+input {
+  padding: 10px;
+  width: 100%;
+
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+/* Mark the active step: */
+.step.active {
+  opacity: 1;
+  background: #0065fc;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  /* background-color: #04aa6d; */
+}
+.pet-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 15px;
+  flex-direction: column;
+}
+select {
+  padding: 10px;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+}
+.form-input {
+  width: 300px;
+}
+.form-input-radio {
+  /* display: flex; */
+  /* align-item: flex-start; */
+  width: 50px;
+  display: flex;
+  /* background: red; */
+  /* margin-left: 5px; */
+  justify-content: flex-start;
+}
+.unsure {
+  width: 70px;
+}
+.question {
+  font-weight: 400;
+  text-align: left;
+}
+.question-tag {
+  width: 350px;
+}
+.medication {
+  /* margin-left: 20px; */
+}
+.radio {
+  display: flex;
+  margin-right: auto;
+  /* margin-right: auto; */
+  /* width: 10px; */
+}
+.input-box {
+  border-radius: 8px;
+}
+.btn-container {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+.next-btn {
+  padding: 14px;
+  border-radius: 50px;
+  border: none;
+  width: 100%;
+  background: #0065fc;
+  color: #fff;
+  margin: 0 auto;
+  font-family: Urbanist;
+}
+.prev-btn {
+  display: none;
+}
+.btn-add-pet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: #ff8a00;
+  border: none;
+  gap: 2px;
+  border-radius: 50px;
+}
+.btn-add-pet img {
+  width: 14px;
+}
+.form-box-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.step-3 {
+  width: 400px;
+  /* background: red; */
+}
+label {
+  font-family: Urbanist;
+}
+.form-box {
+  display: flex;
+  gap: 15px;
+}
+.success {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #fff;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  z-index: 50;
+}
+.successful {
+  display: flex;
+}
+.success-img {
+  display: flex;
+  justify-content: center;
+}
+.success-img img {
+  width: 70px;
+}
+.text-success {
+  margin-top: 30px;
+}
+.success-btn {
+  margin-top: 40px;
+  width: 60px;
+  background: #0065fc;
+  border: none;
+  color: #fff;
+  padding: 8px;
+  text-transform: uppercase;
+}
+/* overlay */
+.overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: none;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 20;
+}
+.overlay-active {
+  display: flex;
+}
+@media screen and (max-width: 320px) {
+  #regForm {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 414px) {
+  #regForm {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  #regForm {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .step-3 {
+    width: 350px;
+  }
+}
