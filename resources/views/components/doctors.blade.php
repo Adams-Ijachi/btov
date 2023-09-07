@@ -154,6 +154,9 @@
                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                                 <p>{{ $doctor->location }}</p>
                             </div>
+                            <div>
+                                <p> 	&#8358; {{ $doctor->price }}  </p>
+                            </div>
                         </div>
 
                     </div>
