@@ -15,7 +15,7 @@
                 kits - all from comfort of your own home.
             </p>
             <div class="btn-container">
-                <a href="{{ asset('signup.html') }}">get started </a>
+                <a href="{{ route('signup') }}">get started </a>
                 <button class="btn-play">
                     <img src="{{ asset('images/play-circle.png') }}" alt="" />
                     play video

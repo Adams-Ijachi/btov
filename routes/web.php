@@ -35,7 +35,12 @@ Route::post('/login', [\App\Http\Controllers\UserAuthController::class, 'login']
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/doctors', [\App\Http\Controllers\UserAppointmentController::class, 'index'])->name('doctors');
+
+    Route::get('/doctors/search', [\App\Http\Controllers\UserAppointmentController::class, 'search'])->name('doctors.search');
+    Route::get('/doctors/order', [\App\Http\Controllers\UserAppointmentController::class, 'orderDoctors'])->name('doctors.order');
+
     Route::get('/doctors/{id}', [\App\Http\Controllers\UserAppointmentController::class, 'details'])->name('doctors.details');
+
 
 //    Route::get('/appointments', [\App\Http\Controllers\UserAppointmentController::class, 'appointments'])->name('appointments');
     Route::get('/appointment/{id}', [\App\Http\Controllers\UserAppointmentController::class, 'appointment'])->name('appointment');

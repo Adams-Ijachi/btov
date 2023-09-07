@@ -52,4 +52,48 @@ class UserAppointmentController extends Controller
 
         return redirect()->route('doctors');
     }
+
+    // search
+
+    public function search()
+    {
+        $search = request()->query('search');
+
+        if ($search) {
+            $doctors = Doctor::where('name', 'LIKE', "%{$search}%")->get();
+        } else {
+            $doctors = Doctor::all();
+        }
+        return view('components.doctors', [
+            'doctors' => $doctors,
+        ]);
+    }
+
+    // sort
+
+    public function orderDoctors()
+    {
+
+        $order = request()->query('order');
+
+        $doctors =  Doctor::all();
+
+        if ($order == "rating") {
+            $doctors = Doctor::orderBy('rating', 'desc')->get();
+        }
+        if ($order == "price") {
+            $doctors = Doctor::orderBy('price', 'desc')->get();
+        }
+        if ($order == "distance") {
+            $doctors = Doctor::orderBy('location', 'desc')->get();
+        }
+        if ($order == "exp") {
+            $doctors = Doctor::orderBy('experience', 'desc')->get();
+        }
+
+//
+        return view('components.doctors', [
+            'doctors' => $doctors,
+        ]);
+    }
 }

@@ -57,7 +57,7 @@
                     <button type="submit" class="btn-submit">create account</button>
                     <p>
                         Already Have an Account?
-                        <span><a href="{{ route('signin') }}">Sign in</a></span>
+                        <span><a href="{{ route('login') }}">Sign in</a></span>
                     </p>
                 </form>
             </article>
