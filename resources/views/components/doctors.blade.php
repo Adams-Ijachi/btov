@@ -52,19 +52,50 @@
     <!-- main section -->
     <main class="container">
         <div class="top">
-            <h3 class="doctor">Ratings</h3>
+            @php
+                // get query string
+                $query = request()->query('order');
+
+                // check if query string is not empty
+                if ($query) {
+                    // check if query string is equal to rating
+                    if ($query == 'rating') {
+                        // set the title to rating
+                        $title = 'Rating';
+                    } elseif ($query == 'exp') {
+                        // set the title to experience
+                        $title = 'Experience';
+                    } elseif ($query == 'distance') {
+                        // set the title to distance
+                        $title = 'Distance';
+                    } elseif ($query == 'price') {
+                        // set the title to price
+                        $title = 'Price';
+                    }
+                } else {
+                    // set the title to rating
+                    $title = 'Rating';
+                }
+            @endphp
+            <h3 class="doctor">
+                {{ $title }}
+            </h3>
 
             <div class="underline"></div>
-            <div class="five">
-                <p>5 starts</p>
-                <div class="rate-stars">
-                    <img src="{{ asset('images/Star.png') }}" alt="" />
-                    <img src="{{ asset('images/Star.png') }}" alt="" />
-                    <img src="{{ asset('images/Star.png') }}" alt="" />
-                    <img src="{{ asset('images/Star.png') }}" alt="" />
-                    <img src="{{ asset('images/Star.png') }}" alt="" />
+            @if( $query == 'rating' )
+                <div class="five">
+                    <p>5 starts</p>
+                    <div class="rate-stars">
+                        <img src="{{ asset('images/Star.png') }}" alt="" />
+                        <img src="{{ asset('images/Star.png') }}" alt="" />
+                        <img src="{{ asset('images/Star.png') }}" alt="" />
+                        <img src="{{ asset('images/Star.png') }}" alt="" />
+                        <img src="{{ asset('images/Star.png') }}" alt="" />
+                    </div>
                 </div>
-            </div>
+
+
+            @endif
         </div>
         <div class="container-fluid" style="display: grid;
     grid-template-columns: repeat(4, 1fr);
