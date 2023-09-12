@@ -241,7 +241,9 @@ label {
   border: none;
   color: #fff;
   padding: 8px;
+  text-align: center;
   text-transform: uppercase;
+  z-index: 100;
 }
 /* overlay */
 .overlay {

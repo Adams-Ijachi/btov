@@ -15,7 +15,11 @@ class Appointments extends Model
         'body',
         'status',
         'user_id',
-        'doctor_id'
+        'doctor_id',
+        'had_surgery',
+        'had_medications',
+        'had_examinations',
+        'details',
     ];
 
     public function user(): \Illuminate\Database\Eloquent\Relations\BelongsTo

@@ -1,0 +1,90 @@
+.form-section {
+  display: flex;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+.form-sec {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+  gap: 20px;
+}
+input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+button {
+  background: #0065fc;
+  border: none;
+  padding: 14px;
+  color: #fff;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.success {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #fff;
+  height: 400px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  z-index: 50;
+}
+.successful {
+  display: flex;
+}
+.success-img {
+  display: flex;
+  justify-content: center;
+}
+.success-img img {
+  width: 70px;
+}
+.text-success {
+  margin-top: 30px;
+}
+.success-btn {
+  margin-top: 40px;
+  width: 60px;
+  background: #0065fc;
+  border: none;
+  color: #fff;
+  padding: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 100;
+}
+/* overlay */
+.overlay {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: none;
+  background-color: #000;
+  opacity: 0.5;
+  z-index: 20;
+}
+.overlay-active {
+  display: flex;
+}

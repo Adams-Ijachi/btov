@@ -6,6 +6,7 @@ use App\Http\Requests\CreateAppointmentRequest;
 use App\Models\Appointments;
 use App\Models\Doctor;
 use App\Models\Dog;
+use Illuminate\Http\Request;
 
 class UserAppointmentController extends Controller
 {
@@ -35,16 +36,24 @@ class UserAppointmentController extends Controller
 
     // book
 
-    public function book(CreateAppointmentRequest $request,Doctor $id)
+    public function book(Request $request,Doctor $id)
     {
-        $validated  = $request->validated();
+
+        $validated  = $request->all();
+
         Dog::create([
             'name' => $validated['name'],
             'breed' => $validated['breed'],
+            'weight' => $validated['weight'],
+            'date_of_birth' => $validated['dob'],
+            'gender' => $validated['gender'],
             'user_id' => auth()->user()->id,
         ]);
         Appointments::create([
             'details' => $validated['details'],
+            'had_surgery' => $validated['had_surgery'],
+            'had_medications' => $validated['had_medications'],
+            'had_examinations' => $validated['had_examinations'],
             'user_id' => auth()->user()->id,
             'doctor_id' => $id->id,
         ]);
@@ -76,6 +85,7 @@ class UserAppointmentController extends Controller
 
         $order = request()->query('order');
 
+
         $doctors =  Doctor::all();
 
         if ($order == "rating") {
@@ -90,6 +100,7 @@ class UserAppointmentController extends Controller
         if ($order == "exp") {
             $doctors = Doctor::orderBy('experience', 'desc')->get();
         }
+
 
 //
         return view('components.doctors', [

@@ -1,5 +1,6 @@
 const overlay = document.querySelector('.overlay')
 const success = document.querySelector('.success')
+const successBtn = document.querySelector('.success-btn')
 const formSubmit = document.getElementById('regForm')
 var currentTab = 0 // Current tab is set to be the first tab (0)
 showTab(currentTab) // Display the current tab
@@ -15,7 +16,12 @@ function showTab(n) {
     document.getElementById('prevBtn').style.display = 'none'
   }
   if (n == x.length - 1) {
-    document.getElementById('nextBtn').innerHTML = 'Submit'
+    document.getElementById('nextBtn').innerHTML = 'Submit';
+    document.getElementById('nextBtn').addEventListener('click', () => {
+        formSubmit.submit()
+})
+
+
   } else {
     document.getElementById('nextBtn').innerHTML = 'Next'
   }
@@ -86,7 +92,13 @@ function fixStepIndicator(n) {
   x[n].className += ' active'
 }
 
-const removeSuccess = () => {
+// const removeSuccess = () => {
+//   success.classList.remove('successful')
+//   overlay.classList.remove('overlay-active')
+// }
+
+successBtn.addEventListener('click', () => {
   success.classList.remove('successful')
   overlay.classList.remove('overlay-active')
-}
+  location.reload()
+})

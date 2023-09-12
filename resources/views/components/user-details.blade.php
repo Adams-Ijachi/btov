@@ -1,7 +1,7 @@
 <x-layout.home-layout>
     <div class="back">
-        <a class="back-btn" href=""
-        ><img src="./images/back.png" alt="" /> back</a
+        <a class="back-btn" href="{{ route('doctors') }}"
+        ><img src="{{ asset('images/back.png') }}" alt="" /> back</a
         >
     </div>
     <!-- main container -->

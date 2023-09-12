@@ -14,7 +14,10 @@ class Dog extends Model
         'name',
         'breed',
         'age',
-        'user_id'
+        'user_id',
+        'date_of_birth',
+        'weight',
+        'gender'
     ];
 
     public function user()

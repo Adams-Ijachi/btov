@@ -35,12 +35,6 @@
     <link rel="stylesheet" href="{{ asset('appointment.css') }}" />
     <link rel="stylesheet" href="{{ asset('user-details.css') }}" />
 
-
-    <link
-        href="https://allfont.net/allfont.css?fonts=porkyand039s-heavy"
-        rel="stylesheet"
-        type="text/css"
-    />
     <title>Cannie Vet</title>
 </head>
 <body>

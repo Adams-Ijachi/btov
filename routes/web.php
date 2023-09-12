@@ -16,6 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
+
+Route::get('/problems', function () {
+    return view('components.problems');
+})->name('problems');
+
+Route::get('/faq', function () {
+    return view('components.faq');
+})->name('faq');
+
+Route::get('/contacts', function () {
+    return view('components.contact');
+})->name('contacts');
+
 Route::get('/signup', function () {
     return view('components.signup');
 })->name('signup');
